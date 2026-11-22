@@ -1,0 +1,596 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Courier New", monospace;
+    background: #eee7ff;
+    color: #57466f;
+}
+
+
+.cover-page {
+    min-height: 650px;
+    padding: 35px 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    overflow: hidden;
+
+    background: linear-gradient(
+        135deg,
+        #b9dff0,
+        #d9c9f5,
+        #eee1ff
+    );
+}
+
+.cover-card {
+    width: 100%;
+    max-width: 430px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #fffaff;
+
+    border: 4px solid #9277bd;
+
+    box-shadow: 7px 7px 0 #8069a5;
+
+    position: relative;
+    z-index: 2;
+}
+
+.small-label {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    background: #eee4ff;
+    color: #8268ac;
+
+    border: 2px solid #c3afe5;
+}
+
+#coverCharacter {
+    display: block;
+
+    width: 128px;
+    height: 128px;
+
+    margin: 10px auto;
+
+    image-rendering: pixelated;
+}
+
+.cover-card h1 {
+    font-size: 35px;
+    color: #b34f81;
+    text-shadow: 3px 3px #f5d4e5;
+}
+
+.subtitle {
+    font-size: 12px;
+    margin: 9px 0 18px;
+    color: #a084bd;
+}
+
+.start-button {
+    width: 85%;
+    padding: 14px;
+
+    background: #b79ce9;
+    color: white;
+
+    border: 3px solid #8064a9;
+    box-shadow: 4px 4px 0 #8064a9;
+
+    font-family: inherit;
+    font-size: 15px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.start-button:hover {
+    background: #a58ad8;
+    transform: translateY(-2px);
+}
+
+.instructions {
+    margin-top: 22px;
+    padding: 13px;
+
+    background: #f1eaff;
+    border: 2px dashed #b8a2db;
+}
+
+.instructions h3 {
+    font-size: 12px;
+    margin-bottom: 8px;
+
+    color: #8263ae;
+    letter-spacing: 2px;
+}
+
+.instructions p {
+    font-size: 10px;
+    line-height: 1.9;
+    color: #75668a;
+}
+
+.cover-footer {
+    font-size: 9px;
+    margin-top: 17px;
+
+    letter-spacing: 2px;
+    color: #a28bc3;
+}
+
+
+
+.pixel-star {
+    position: absolute;
+    color: #fff4c8;
+    font-size: 35px;
+    animation: float 3s infinite ease-in-out;
+}
+
+.star1 {
+    top: 12%;
+    left: 12%;
+}
+
+.star2 {
+    top: 23%;
+    right: 12%;
+}
+
+.star3 {
+    bottom: 15%;
+    left: 15%;
+}
+
+.star4 {
+    bottom: 20%;
+    right: 13%;
+}
+
+@keyframes float {
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+
+
+
+.game-section {
+    display: none;
+
+    padding: 35px 15px;
+
+    background: #ded1fa;
+    min-height: 600px;
+}
+
+.game-container {
+    width: 100%;
+    max-width: 900px;
+
+    margin: auto;
+    padding: 12px;
+
+    background: #fffaff;
+
+    border: 4px solid #9277bd;
+    box-shadow: 7px 7px 0 #8069a5;
+}
+
+
+
+.game-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    flex-wrap: wrap;
+    gap: 12px;
+
+    padding: 12px 15px;
+    margin-bottom: 10px;
+
+    background: #eee4ff;
+    border: 2px solid #c3afe5;
+}
+
+.game-title {
+    color: #8060ae;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.game-stats {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.score-box,
+.difficulty-box {
+    padding: 9px 12px;
+
+    background: white;
+    border: 2px solid #c6b3e4;
+
+    font-size: 12px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.difficulty-box {
+    background: #f7e6ff;
+    color: #8969b7;
+}
+
+.health-box {
+    font-size: 24px;
+    letter-spacing: 3px;
+    color: #ed719b;
+    white-space: nowrap;
+}
+
+.empty-heart {
+    color: #b9b9c7;
+}
+
+
+
+.game-buttons {
+    display: flex;
+    gap: 7px;
+}
+
+.game-buttons button {
+    padding: 8px 11px;
+
+    color: white;
+
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: bold;
+
+    cursor: pointer;
+    border: 2px solid;
+}
+
+.pause-button {
+    background: #e0b46a;
+    border-color: #b58a3f;
+}
+
+.home-button {
+    background: #8da8ce;
+    border-color: #647da2;
+}
+
+.quit-button {
+    background: #d77e9d;
+    border-color: #a95075;
+}
+
+.game-buttons button:hover {
+    filter: brightness(0.92);
+}
+
+
+
+
+.canvas-container {
+    width: 100%;
+
+    position: relative;
+    overflow: hidden;
+
+    border: 4px solid #8069aa;
+    background: #d9caff;
+
+    touch-action: none;
+}
+
+#gameCanvas {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 8 / 5;
+
+    image-rendering: pixelated;
+
+    cursor: grab;
+
+    touch-action: none;
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#gameCanvas:active {
+    cursor: grabbing;
+}
+
+
+
+
+.game-overlay {
+    position: absolute;
+    inset: 0;
+
+    display: none;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(52, 40, 79, 0.65);
+
+    padding: 15px;
+}
+
+.overlay-card {
+    width: 90%;
+    max-width: 330px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #fffaff;
+
+    border: 4px solid #a78bd7;
+    box-shadow: 5px 5px 0 #765d9e;
+}
+
+.overlay-card h2 {
+    color: #a36dba;
+    font-size: 25px;
+    margin-bottom: 12px;
+}
+
+.overlay-card p {
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.final-score {
+    margin: 12px 0;
+    font-weight: bold;
+}
+
+.overlay-card button {
+    width: 85%;
+
+    padding: 11px;
+    margin-top: 9px;
+
+    background: #bda1eb;
+
+    border: 2px solid #8065a9;
+    color: white;
+
+    font-family: inherit;
+    font-weight: bold;
+
+    cursor: pointer;
+}
+
+.overlay-card .back-button {
+    background: #8da8ce;
+    border-color: #647da2;
+}
+
+
+/* =========================
+   CONTROL GUIDE
+========================= */
+
+.control-hint {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+    padding: 13px 8px 4px;
+
+    font-size: 10px;
+    color: #8b75ac;
+    font-weight: bold;
+}
+
+
+.description-section {
+    padding: 45px 20px;
+
+    background: #f0eaff;
+    border-top: 5px solid #b59bdf;
+}
+
+.description-heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 13px;
+    margin-bottom: 28px;
+
+    color: #886ab9;
+}
+
+.description-heading h2 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.description-heading span {
+    color: #e5ad68;
+    font-size: 25px;
+}
+
+
+
+.description-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.description-card {
+    position: relative;
+
+    padding: 25px 20px;
+    min-height: 245px;
+
+    background: #fffaff;
+
+    border-top: 5px solid #ac91dc;
+    border-bottom: 3px solid #d5c4ee;
+
+    box-shadow: 4px 4px 0 #d5c4ee;
+}
+
+.card-number {
+    font-size: 28px;
+    font-weight: bold;
+    color: #dfccef;
+    margin-bottom: 13px;
+}
+
+.description-card h3 {
+    color: #8969b7;
+    font-size: 14px;
+    margin-bottom: 12px;
+}
+
+.description-card p {
+    color: #766b88;
+
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+
+
+.app-information {
+    max-width: 1100px;
+    margin: 30px auto 0;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #d9cafa;
+    border: 3px dashed #a68acb;
+}
+
+.app-information p {
+    font-size: 11px;
+    color: #76638f;
+    line-height: 1.8;
+}
+
+.app-information h3 {
+    color: #72559e;
+    margin: 10px 0;
+    font-size: 20px;
+}
+
+.app-information span {
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #8068a6;
+}
+
+.copyright {
+    margin-top: 15px;
+    letter-spacing: 2px;
+}
+
+
+@media (max-width: 650px) {
+
+    .game-section {
+        padding: 25px 8px;
+    }
+
+    .game-container {
+        padding: 7px;
+    }
+
+    .game-header {
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .game-title {
+        width: 100%;
+        text-align: center;
+        font-size: 17px;
+    }
+
+    .game-stats {
+        justify-content: center;
+        gap: 8px;
+    }
+
+    .score-box,
+    .difficulty-box {
+        font-size: 10px;
+    }
+
+    .health-box {
+        font-size: 20px;
+    }
+
+    .game-buttons button {
+        font-size: 10px;
+    }
+
+    .control-hint {
+        font-size: 8px;
+        gap: 5px;
+    }
+
+    .description-container {
+        grid-template-columns: 1fr;
+    }
+
+    .description-card {
+        min-height: auto;
+    }
+
+    .description-heading h2 {
+        font-size: 19px;
+    }
+
+    .cover-page {
+        min-height: 650px;
+    }
+
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roble Jeshascend</title>
+    <link rel="stylesheet" href="jeshi1.css">
+</head>
+
+<body>
+
+    <section class="cover-page" id="coverPage">
+
+        <span class="pixel-star star1">✦</span>
+        <span class="pixel-star star2">✧</span>
+        <span class="pixel-star star3">✦</span>
+        <span class="pixel-star star4">✧</span>
+
+        <div class="cover-card">
+
+            <p class="small-label">A PIXEL SKY ADVENTURE</p>
+
+            <canvas id="coverCharacter"
+                    width="128"
+                    height="128"></canvas>
+
+            <h1>ROBLE JESHASCEND</h1>
+
+            <p class="subtitle">
+               Up up the Skyyyy!!!
+            </p>
+
+            <button class="start-button" onclick="startGame()">
+                ▶ START GAME
+            </button>
+
+            <div class="instructions">
+
+                <h3>HOW TO PLAY</h3>
+
+                <p>
+                    ♡ Jump on platforms to climb higher.<br>
+                    ♡ Avoid spikes and flying enemies.<br>
+                    ♡ Only 2 hearts appear per level. Grab them!<br>
+                    ♡ Every level gets harder. Don't fall!
+                </p>
+
+            </div>
+
+            <p class="cover-footer">
+                JUST FOR FUN ADVENTURE
+            </p>
+
+        </div>
+
+    </section>
+
+
+
+    <section class="game-section" id="gameSection">
+
+        <div class="game-container">
+
+            <div class="game-header">
+
+                <h2 class="game-title">
+                    ♡ ROBLE JESHASCEND
+                </h2>
+
+                <div class="game-stats">
+
+                    <div class="score-box">
+                        SCORE: <span id="score">0</span>
+                    </div>
+
+                    <div class="health-box" id="hearts">
+                        ♥ ♥ ♥
+                    </div>
+
+                    <div class="difficulty-box">
+                        LEVEL: <span id="level">1 - EASY</span>
+                    </div>
+
+                </div>
+
+                <div class="game-buttons">
+
+                    <button class="pause-button" onclick="pauseGame()">
+                        ❚❚ PAUSE
+                    </button>
+
+                    <button class="home-button" onclick="goHome()">
+                        ⌂ HOME
+                    </button>
+
+                    <button class="quit-button" onclick="quitGame()">
+                        ✕ QUIT
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="canvas-container">
+
+                <canvas id="gameCanvas"
+                        width="800"
+                        height="500">
+                </canvas>
+
+                <div class="game-overlay" id="gameOverlay">
+
+                    <div class="overlay-card">
+
+                        <h2 id="overlayTitle">GAME OVER!</h2>
+
+                        <p id="overlayMessage">
+                            Oh no! Jesh couldn't reach the clouds.
+                        </p>
+
+                        <p class="final-score">
+                            YOUR SCORE:
+                            <span id="finalScore">0</span>
+                        </p>
+
+                        <button id="restartButton" onclick="startGame()">
+                            ↻ PLAY AGAIN
+                        </button>
+
+                        <button class="back-button" onclick="goHome()">
+                            ⌂ HOME
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <div class="game-overlay" id="pauseOverlay">
+
+                    <div class="overlay-card">
+
+                        <h2>PAUSED</h2>
+
+                        <p>Take a break! What would you like to do?</p>
+
+                        <button onclick="resumeGame()">
+                            ▶ RESUME
+                        </button>
+
+                        <button class="back-button" onclick="quitGame()">
+                            ✕ QUIT GAME
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="control-hint">
+
+                <span>PC: A / D or ← / →</span>
+
+                <span>RIGHT CLICK + DRAG</span>
+
+                <span>PHONE: TOUCH + SLIDE</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <script src="jeshi1.js"></script>
+
+</body>
+</html>
